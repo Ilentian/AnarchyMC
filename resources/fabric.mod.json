@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "betterBoatRender",
+  "version": "0.5.0",
+
+  "name": "BetterBoatRender",
+  "description": "BetterBoatRender 0.5.0",
+  "authors": [
+    "cire"
+  ],
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.cwhack.CwHackInitializer"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "minecraft": "1.18.x~1.19",
+    "java": ">=17"
+  }
+}
