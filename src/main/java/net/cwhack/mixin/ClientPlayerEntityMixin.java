@@ -102,7 +102,7 @@ public abstract class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
 	}
 
 	@Inject(at = @At("HEAD"),
-			method = "sendChatMessage",
+			method = "sendChatMessage(Ljava/lang/String;Lnet/minecraft/text/Text;)V",
 			cancellable = true)
 	private void onSendChatMessage(String message, Text preview, CallbackInfo ci)
 	{
@@ -119,7 +119,7 @@ public abstract class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
 			return;
 
 //		ChatMessageC2SPacket packet =
-		MC.player.sendChatMessage(event.getMessage(), Text.of("..."));
+		MC.player.sendChatMessage(event.getMessage(), null);
 //		networkHandler.sendPacket(packet);
 		ci.cancel();
 	}
