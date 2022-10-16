@@ -26,7 +26,7 @@ public abstract class GameRendererMixin implements AutoCloseable, SynchronousRes
 			method = {
 					"renderWorld(FJLnet/minecraft/client/util/math/MatrixStack;)V"},
 			locals = LocalCapture.CAPTURE_FAILSOFT)
-	private void onRenderWorld(float tickDelta, long finishTimeNano, MatrixStack matrices, CallbackInfo ci, boolean bl, Camera camera, MatrixStack matrixStack, double d, Matrix4f matrix4f)
+	private void onRenderWorld(float tickDelta, long finishTimeNano, MatrixStack matrices, CallbackInfo ci, boolean bl, Camera camera, MatrixStack matrixStack, double d, float a, float b, Matrix4f matrix4f)
 	{
 		RenderEvent event = new RenderEvent(matrices, tickDelta);
 		EventManager.fire(event);
